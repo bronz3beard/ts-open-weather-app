@@ -43,18 +43,6 @@ export default {
     WeatherWidget,
     DropDownSelect
   },
-  head: {
-    // creates a title tag in header.
-    title () {
-      return {
-        inner: "Weather Now"
-      }
-    },
-    meta: [
-      // creates a meta description tag in header.
-      { name: 'description', content: 'My description' }
-    ]
-  },
   methods: {
     handleSelectChange (values) {
       this.$emit('selected-city', values);
