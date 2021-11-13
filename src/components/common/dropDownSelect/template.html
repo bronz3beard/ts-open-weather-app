@@ -1,0 +1,7 @@
+<div class="selectContainer">
+  <select @change="emitSelectChange($event)" v-model="cityList.selectedOption">
+    <option v-for="option in cityList.options" :value="option.id">
+      {{ option.city }}
+    </option>
+  </select>
+</div>

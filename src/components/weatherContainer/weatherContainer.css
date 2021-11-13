@@ -1,0 +1,24 @@
+.weatherContainer {
+  right: 0;
+  margin: 0;
+  top: 0rem;
+  width: 25rem;
+  z-index: 20;
+  position: fixed;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 0px 0px 0px 20px;
+  background: rgba(14, 14, 14, 0.741);
+}
+
+h3 {
+  color: #fefefe;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 40em) {
+  .weatherContainer {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}

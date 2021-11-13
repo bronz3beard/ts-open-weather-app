@@ -1,0 +1,61 @@
+<style src="./weatherContainer.css" lang="css" scoped></style>
+<template src="./template.html"></template>
+
+<script>
+import WeatherWidget from '../weatherWidget';
+import DropDownSelect from '../common/dropDownSelect';
+
+export default {
+  name: 'WeatherContainer',
+  props: {
+    citySelect: {
+      type: String,
+    },
+    citySelectId: {
+      type: String,
+    },
+    weather: {
+      type: Object,
+      required: true,
+      default() {
+        return {
+          weather: {
+            type: Array,
+            required: true,
+          },
+          main: {
+            type: Object,
+            required: true,
+          }
+        }
+      },
+    },
+    loadingWeather: {
+      type: Boolean,
+      required: true,
+      default: true,
+    },
+  },
+  components: {
+    WeatherWidget,
+    DropDownSelect
+  },
+  head: {
+    // creates a title tag in header.
+    title () {
+      return {
+        inner: "Weather Now"
+      }
+    },
+    meta: [
+      // creates a meta description tag in header.
+      { name: 'description', content: 'My description' }
+    ]
+  },
+  methods: {
+    handleSelectChange (values) {
+      this.$emit('selected-city', values);
+    }
+  }
+}
+</script>

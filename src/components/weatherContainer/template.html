@@ -1,0 +1,10 @@
+<div class="weatherContainer">
+  <h3>Weather in {{ citySelect }}</h3>
+  <div v-if="loadingWeather">Loading...</div>
+  <div v-else>
+    <DropDownSelect @select-city="handleSelectChange" :citySelectId="citySelectId" />
+    <div v-for="item in weather.weather" :key="weather.id">
+      <WeatherWidget :item="item" :weather="weather.main" />
+    </div>
+  </div>
+</div>

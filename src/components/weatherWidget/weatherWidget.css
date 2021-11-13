@@ -1,0 +1,18 @@
+.tempNow {
+  display: flex;
+  color: #fefefe;
+  font-family: Helvetica, sans-serif;
+}
+
+.description {
+  margin: 3rem 0 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.imageContainer>img {
+  height: 8rem;
+  min-width: 8rem;
+  display: inline-block;
+  vertical-align: middle;
+}

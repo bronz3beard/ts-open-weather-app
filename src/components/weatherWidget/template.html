@@ -1,0 +1,8 @@
+<div class="tempNow">
+  <div class="imageContainer">
+    <img alt="weather-icon" :src="imgUrl" />
+  </div>
+  <div class="description">
+    {{ Math.ceil(weather.temp) }}°C {{ item.description }}
+  </div>
+</div>
