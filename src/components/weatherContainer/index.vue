@@ -8,6 +8,9 @@ import DropDownSelect from '../common/dropDownSelect';
 export default {
   name: 'WeatherContainer',
   props: {
+    error: {
+      type: Boolean
+    },
     citySelect: {
       type: String,
     },

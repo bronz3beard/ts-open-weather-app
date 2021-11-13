@@ -1,6 +1,10 @@
 <div class="weatherContainer">
-  <h3>Weather in {{ citySelect }}</h3>
-  <div v-if="loadingWeather">Loading...</div>
+  <h3 v-if="!error">Weather in {{ citySelect }}</h3>
+  <div v-if="error" class="error">
+    ERROR: There has been an error loading the weather information, please try again by refreshing
+    your page.
+  </div>
+  <div v-else-if="loadingWeather">Loading...</div>
   <div v-else>
     <DropDownSelect @select-city="handleSelectChange" :citySelectId="citySelectId" />
     <div v-for="item in weather.weather" :key="weather.id">

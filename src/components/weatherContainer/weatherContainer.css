@@ -10,6 +10,14 @@
   background: rgba(14, 14, 14, 0.741);
 }
 
+.error {
+  font-weight: 600;
+  color: #f35e5e;
+  text-align: left;
+  padding: 1rem 0 1rem 0;
+  font-family: Helvetica, sans-serif;
+}
+
 h3 {
   color: #fefefe;
   text-align: center;
