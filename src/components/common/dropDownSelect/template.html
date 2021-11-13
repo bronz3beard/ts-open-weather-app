@@ -1,6 +1,6 @@
 <div class="selectContainer">
   <select @change="emitSelectChange($event)" v-model="cityList.selectedOption">
-    <option v-for="option in cityList.options" :value="option.id">
+    <option v-for="option in cityList.options" :value="option.id" :disabled="option.id == 0">
       {{ option.city }}
     </option>
   </select>

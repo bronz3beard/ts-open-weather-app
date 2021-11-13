@@ -13,11 +13,12 @@
       return {
         cityList: {
           options: [
-            {id: '2000', city: 'Sydney'},
-            {id: '3000', city: 'Melbourne'},
-            {id: '4000', city: 'Brisbane'}
+            { id: '2000', city: 'Sydney' },
+            { id: '3000', city: 'Melbourne' },
+            { id: '4000', city: 'Brisbane' },
+            { id: '0', city: 'Select A City' }
           ],
-          selectedOption: !this.citySelectId ? '4000': this.citySelectId
+          selectedOption: !this.citySelectId ? '0': this.citySelectId
         }
       }
     },
